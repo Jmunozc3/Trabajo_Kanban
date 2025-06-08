@@ -26,7 +26,7 @@ export interface User {
 export async function connectDB(): Promise<Db> {
   if (db) return db;
 
-  client = new MongoClient(MONGO_URL);
+  client = new MongoClient("mongodb+srv://juan:1234@cluster0.qmfze.mongodb.net/");
   await client.connect();
   db = client.db(DB_NAME);
 
